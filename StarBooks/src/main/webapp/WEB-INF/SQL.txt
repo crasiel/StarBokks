@@ -1,0 +1,31 @@
+회원가입
+CREATE TABLE member (
+  idx int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  user_id varchar(20) NOT NULL UNIQUE KEY,
+  user_pw varchar(200) NOT NULL,
+  user_name varchar(20) NOT NULL,
+  user_email varchar(30) NOT NULL UNIQUE KEY,
+  user_birth varchar(8) NOT NULL,
+  user_gender varchar(2) NOT NULL
+) ;
+
+-->insert 예제. 비밀번호 hash 처리로, 홈페이지에서 회원가입을 할 것을 권함.
+insert into member(user_id, user_pw,user_name,user_email,user_birth, user_gender)
+values('test1', '1234', '테스터', 'test1@gmail.com', '19930808', '여');			
+
+회원 탈퇴
+CREATE TABLE del_member (
+  idx int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  user_id varchar(20) NOT NULL UNIQUE KEY,
+  user_pw varchar(200) NOT NULL,
+  user_name varchar(20) NOT NULL,
+  user_email varchar(30) NOT NULL UNIQUE KEY,
+  user_birth varchar(8) NOT NULL,
+  user_gender varchar(2) NOT NULL,
+  delete_date datetime default now() NOT NULL
+);
+
+탈퇴 처리
+insert into del_member(user_id, user_pw, user_name, user_email, user_birth, user_gender)
+select user_id, user_pw, user_name, user_email, user_birth, user_gender from member where user_id = '탈퇴회원 아이디';
+delete from member where user_id = '탈퇴회원 아이디';

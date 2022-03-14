@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+	xsi:schemaLocation="http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
+		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	<context:component-scan base-package="com.spring.service" />
+	<context:component-scan base-package="com.spring.exception" />
+	<mybatis-spring:scan base-package="com.spring.book"/>
+	<mybatis-spring:scan base-package="com.spring.member"/>
+	
+	<bean id="multipartResolver" 
+		  class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		  <property name="maxUploadSize" value="20971520" />
+		  <property name="maxInMemorySize" value="20971520" />
+		  <property name="defaultEncoding" value="utf-8" />
+    </bean>
+	
+<!-- 	리눅스 서버
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://58.231.155.207:3306/starbooks?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=UTC" />
+		<property name="username" value="starbooks" />
+		<property name="password" value="1234" />
+	</bean> -->
+	
+	<!-- localhost 서버 - test용 -->
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://localhost:3306/starbooks?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=UTC" />
+		<property name="username" value="root" />
+		<property name="password" value="1234" />
+	</bean>
+	
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="configLocation" value="classpath:config/mybatis-config.xml" />
+		<property name="mapperLocations">
+			<list>
+				<value>classpath:config/sqlmap-starbooks.xml</value>
+			</list>
+		</property>
+	</bean>
+	
+	<!-- mail설정 -->
+<!--	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host" value="smtp.naver.com" />
+		<property name="port" value="465" />
+		<property name="username" value="아이디" />
+		<property name="password" value="비밀번호" />   -->
+		<!-- 보안연결 ssl 관련 설정 -->
+<!--		<property name="javaMailProperties">
+			<props>
+				<prop key="mail.smpt.auth">true</prop>
+				<prop key="mail.smtp.starttls.enable">true</prop>
+				<prop key="mail.smtps.checkserveridentity">true</prop>
+				<prop key="mail.smtps.ssl.trust">*</prop>
+				<prop key="mail.debug">true</prop>
+				<prop key="mail.smtp.socketFactory.class">javax.net.ssl.SSLSocketFactory</prop>
+			</props>
+		</property>
+	</bean>-->
+	
+	<bean id="sqlSessinTemplate" class="org.mybatis.spring.SqlSessionTemplate" destroy-method="close">
+		<constructor-arg ref="sqlSessionFactory" />
+	</bean>	
+</beans>

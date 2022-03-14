@@ -1,0 +1,180 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+/* 초기설정 */
+* {
+	margin: 0; 
+	padding: 0; 
+	list-style: none; 
+	text-decoration: none; 
+	color: inherit; 
+	font-family: 'Nanum Gothic', sans-serif;
+	font-size : 18px; 
+	box-sizing: border-box;}
+body {background-color : #ebf6ff;}
+h1 { 
+	margin :10px auto;
+	width : 130px;
+	color : #1f8ce6;
+	font-size : 1.2em;
+	font-weight : 800;
+	cursor : pointer;
+	}
+
+section {
+	width : 400px;
+	margin : 50px auto;
+}
+#loginWrap,  #newpwWrap, #findidWrap {margin-top : 75px;}
+h2 {
+	width : 100px; 
+	color : #1f8ce6;
+	margin : 5px auto;
+	font-weight : 800;
+}
+
+output {
+	color : red;
+	font-size: 12px;
+    font-weight: 700;
+    position: inherit;
+    top: -5px;
+    left: 5px;
+}
+input.check {
+	border : 2px solid green;
+}
+input.nocheck {
+	border : 2px solid red;
+}
+section > form > p > input, div > p > input, button {
+	margin-top : 8px;
+	padding-left : 10px;
+	padding-top : 7px;
+	width : 100%;
+	height : 50px;
+	line-height : 50px;
+	 border : 1px solid rgb(214, 222, 235);
+	border-radius : 3px;
+    cursor : pointer;
+}
+section > form > p, div>p {
+	position : relative;
+}
+
+section > form  p  span.offfocus {
+    display: none;
+}
+
+section > form  p span.onfocus {
+	position : absolute; 
+	top : 9px; 
+	left : 7px; 
+	color :#1f8ce6; 
+	font-size : 12px;
+}
+input[type="submit"], button {
+	padding : 0;
+	background-color : #1f8ce6;
+	color : white;
+	font-weight : bold;
+	cursor: pointer;
+	border-radius : 7px;
+}
+button {
+	padding : 0;
+	background-color : white;
+	color : #808991;
+	border : 1px solid rgb(214, 222, 235);
+}
+
+input[type="submit"]:hover, button:hover {
+	color : #1f8ce6;
+	background-color : white;
+	font-weight : bold;
+	border : 2px solid #1f8ce6;
+	
+}
+
+/* radio button*/
+.button-wrap {
+	float : left;
+  	width : 155px;
+  	height : 45px;
+  	margin-left : 5px;
+  	padding-top : 9px;
+}
+
+.button-label {
+  float:left;
+  padding: 11px 20px;
+  cursor: pointer;
+ /*  border-radius : 5px; */
+  color: rgb(115, 128, 150);
+  background-color: white;
+  border : 1px solid rgb(214, 222, 235);
+}
+.button-label h4 {
+	display : inline-block;
+	width : 35px;
+  	font-size: 0.9em;
+}
+.button-label:hover {
+  border-color: #101010;
+}
+
+input[type="radio"]:checked + .button-label {
+  background: #1f8ce6;
+  color: #efefef;
+}
+/* 
+input[type="radio"]:checked + .button-label:hover {
+  background: white;
+  color: #1f8ce6;
+  border : 1px solid #1f8ce6;
+} */
+
+.hidden {
+  display: none;
+}
+
+p.alt {
+	margin-top : 10px;
+	margin-left : 10px;
+	color : #808991; font-size : 13px;
+}
+
+/* checkbox - 이용약관 */
+div.chkWrap {
+	width : 400px; 
+	height : 205px; 
+	margin : 10px 0; 
+	padding : 10px;
+	background-color:white;
+	 border : 1px solid rgb(214, 222, 235);
+}
+/* div.chkWrap > button  {
+	height : 30px;
+	line-height: 30px;
+	margin : 0;
+	border : none;
+} */
+div.chkWrap  > h2 {
+	width : 100%;
+	margin-left : 15px;
+	color: rgb(115, 128, 150);
+}
+div.chkWrap > div.chkbox {
+	width : 100%;
+	padding : 5px 20px;
+}
+div.chkWrap > div.chkbox  > p {
+	font-size : 16px;
+	height: 35px;
+    color: rgb(115, 128, 150);
+}
+div.chkWrap > div.chkbox  > p > input[type="checkbox"] {
+	width : 20px;
+	height : 20px;
+	margin-right: 10px;
+}
+

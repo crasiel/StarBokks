@@ -1,0 +1,295 @@
+@charset "UTF-8";
+#mystarWRap {
+	width : 1000px;
+	height : 700px;
+}
+
+#mystarWRap > div {
+    float:left;
+}
+#mystarWRap >div.leftWrap{
+    width : 25%;
+    padding : 10px 20px;
+}
+#mystarWRap > div.rightWrap{
+    width : 75%;
+    padding : 10px 40px;
+}
+#mystarWRap >div > h2 {
+    margin : 10px 0 20px 0;
+    font-size: 1.4em;
+}
+#mystarWRap >div.leftWrap > ul.left-menu > li {
+    width : 170px;
+    padding : 5px 0 5px 5px;
+    font-weight: 700;
+    line-height: 30px;
+    font-size: 18px;
+    color : #40474d;
+    border-bottom : 1px solid lightgray;
+}
+ul.left-menu > li >ul {
+    padding : 5px 0 10px 20px;
+}
+ul.left-menu > li >ul >li {
+    font-size: 16px;
+    font-weight: 600;
+    color : #808991;
+}
+ul.left-menu > li a:hover{
+	color : #1fbce6;
+}
+ul.left-menu > li a.on {
+	color : #1fbce6;
+}
+.table-wrap {width : 100%; padding :0 10px; }
+.table-wrap >h3 {
+	margin-bottom : 10px;
+	font-size : 1.1em;
+}
+/* Cash-table */
+ul.cash-table {
+	width : 100%; 
+	margin: 0 auto; 
+	border-top: 2px solid lightgray; 
+	border-bottom: 2px solid lightgray;
+}
+.cash-table > li {width: 100%;}
+.cash-table > li:first-child{border-bottom: 2px solid lightgray;}
+
+.cash-table > li.hr-line {
+    border-bottom: 1px solid lightgray;
+}
+
+.cash-table > li:hover {
+    background-color: #eee;
+    border-radius: 20px;
+}
+.cash-table > li:first-child:hover {
+    background-color: white;
+    border-radius : 0;
+}
+
+
+.cash-table > li > p {
+    float: left;
+    height : 40px;
+    line-height: 40px;
+    font-size: 18px;
+}
+.cash-table > li > p:first-child {position: relative; width : 270px;padding-right: 20px; text-align: right;} 
+.cash-table > li > p:nth-child(2) {width: 110px;text-align: center;}
+.cash-table > li > p:last-child {width: 220px;padding-right: 20px; text-align: right;} 
+
+.cash-table > li > p:first-child >input {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 20px;
+    top: 10px;
+}
+
+.cash-table > li > p >label {
+    width : 100%;
+}
+.cash-table > li > p:first-child >label {
+    text-align: right;
+    padding-right: 50px;
+}
+li.active {
+    background-color: #ebf6ff;
+    border-radius: 20px;
+}
+
+/*submit, button*/
+#cashForm >p {
+	margin : 10px auto;
+	width : 200px;
+}
+#cashForm >p > input[type="submit"] {
+	width : 200px;
+	height : 40px;
+	line-height : 40px;
+	margin : 0 auto;
+	background-color : #1f8ce6;
+	color : white;
+	font-weight : bold;
+	cursor: pointer;
+	border : none;
+	border-radius : 7px;
+}
+
+input[type="submit"]:hover, button:hover {
+	color : #1f8ce6;
+	background-color : white;
+	font-weight : bold;
+	border : 2px solid #1f8ce6;
+	
+}
+
+/* mystar */
+#mystarWRap > div#mysratHome {padding : 20px 0 20px 40px;}
+article.infoWrap {border : 2px solid #636c73;}
+article.infoWrap > div {float : left;}
+article.infoWrap > div h3 { 
+	margin : 7px 0;
+	font-size : 1.2em; font-weight: 800;}
+article.infoWrap > div.myinfo {
+	width : 180px;
+	height : 200px;
+	padding : 25px;
+	background-color: #ebf6ff;
+	text-align: center;
+}
+article.infoWrap > div.myinfo > p > button {margin-top : 40px;}
+article.infoWrap > div.mystar-info {width : 524px;}
+article.infoWrap > div.mystar-info > ul {
+	width : 100%;
+	padding : 25px 0;
+	}
+article.infoWrap > div.mystar-info > ul > li {
+	float : left;
+	width : 33.33333%;
+	height : 150px;
+	text-align: center;
+	border-left : 1px dashed lightgray;	
+}
+article.infoWrap > div.mystar-info > ul > li:first-child {
+	border-left : none;
+}
+article.infoWrap > div.mystar-info > ul > li p {
+	margin-top : 7px;
+	font-size: 16px;
+	font-weight: 700;
+}
+article.infoWrap > div.mystar-info > ul > li > a,
+article.infoWrap > div.mystar-info > ul > li >span {
+	display : block;
+	margin-top :45px;
+	padding : 0 20px;
+	font-size: 12px;
+}
+article.infoWrap > div.mystar-info > ul > li > a > span {
+	display : inline-block;
+	margin-top : 0;
+	padding-right : 0;
+}
+article.mystar-recents {
+	width : 100%;
+	hegiht : 300px;
+	margin-top : 40px;
+}
+
+/* Cart */
+#cartWrap {
+	width : 700px;
+	height :600px;
+	margin : 20px auto;
+}
+#cartWrap > div.cartTab-wrap {
+	height : 500px;
+	border : 1px solid lightgray;
+}
+#cartWrap > h2 {
+	margin-bottom : 10px; 
+}
+.tabMenu > ul > li {
+	float : left;
+	width : 50%;
+	height : 45px;
+	line-height: 45px;
+	background-color : lightgray;
+	font-size : 18px;
+	text-align: center;
+}
+.tabMenu > ul > li.active {
+	background-color: white;
+	border : none;
+	font-weight: 800;
+	text-decoration: underline;
+}
+.cartTab-wrap > div.tabCont {
+	width : 100%;
+	padding : 20px;
+	text-align: center;
+}
+.cartTab-wrap > div.tabCont div.block {
+	
+}
+.cartTab-wrap > div.tabCont div.block  >i {
+	margin-top : 170px;
+}
+.cartTab-wrap > div.tabCont div.block >div {
+	display : none;
+}
+.cartTab-wrap > div.tabCont div.block >div:first-child {
+	display: block;;
+}
+
+/* modify */
+table.modify {
+	width : 100%;
+	margin : 0 auto;
+	border-collapse: collapse;
+	border-bottom: 1px solid #e6e8eb;
+}
+table.modify > tbody > tr {
+	border-top : 1px solid  #e6e8eb;
+}
+table.modify > tbody > tr > th {
+	width : 180px;
+	padding : 15px;
+	background: #f2f4f5;
+	font-size : 16px;
+	font-weight: bold;
+	color: #808991;
+}
+table.modify > tbody > tr > td {
+	padding : 15px;
+	color : #333;
+	font-weight: bold;
+}
+
+button.delBtn {
+	display: block;
+	position: absolute;
+	right: 20px;
+	top : 10px;
+}
+
+table.modify > tbody > tr > td > form > p > input[type="password"] {
+	width : 220px;
+	margin : 5px 0;
+	padding : 10px;
+	border : 1px solid #ddd;
+	border-radius : 5px;
+}
+table.modify > tbody > tr > td > form > p > input[type="submit"] {
+	margin : 5px 0;
+	padding : 5px 15px;
+    font-size: 14px;
+	background-color: #1f8ce6;
+    color: white;
+    border : none;
+   border : 2px solid #1f8ce6;
+    border-radius: 3px;
+}
+table.modify > tbody > tr > td > form > p > input[type="submit"]:hover {
+	background-color: white;
+    color: #1f8ce6;
+    border : 2px solid #1f8ce6;
+}
+table.modify > tbody > tr > td > form > p > output {
+	font-size : 12px;
+	margin-left : 10px;
+}
+table.modify > tbody > tr > td > div {
+	padding : 10px 0;
+	font-size : 16px;
+	color : #636c73;
+	font-weight: normal;
+}
+table.modify > tbody > tr > td > div > p {
+	padding : 5px;
+	font-size: 14px;
+}

@@ -1,0 +1,127 @@
+@charset "UTF-8";
+section#listWrap{
+	width : 1120px;
+	height : 601px;
+}
+article.leftList {
+	position : relative;
+	float : left; 
+	width : 320px;
+	height : 600px;
+	margin-top : 1px;
+	background-color :#ebf6ff; 
+	border : 1px solid lightgray;
+	border-top : none;
+	border-bottom : none;
+	z-index: 10;
+}
+ul.lbook-list {
+	width : 50%;
+	padding-top : 10px; 
+	height: 600px;
+	background-color: white;
+}
+ul.lbook-list > li {
+	position : relative;
+	width : 160px;
+	height : 40px;
+	line-height: 40px;
+	padding : 0 15px;
+	font-size : 14px;
+	font-weight: 700;
+}
+ul.lbook-list > li > span {
+	float : right;
+	font-size : 10px;
+	font-weight: 600;
+	color : #1f8ce6; 
+}
+ul.lbook-list > li:hover {
+	background-color : #1f8ce6; 
+	color : white;
+}
+ul.lbook-list > li:hover span {
+	color : white;
+}
+ul.lbook-list > li > ul.lbook-sub-list {
+	position: absolute; 
+	display : none;
+	width : 160px; 
+	height : 600px;
+	padding-top : 20px; 
+	top : -20px;
+	left : 160px; 
+}
+
+ul.lbook-list > li.main-list:hover > ul.lbook-sub-list {
+	display : block;
+}
+ul.lbook-sub-list >li {
+	width : 100%;
+	height: 30px;
+	line-height: 30px;
+	padding : 0 15px;
+	font-size : 12px;
+	font-weight: 500;
+	color: #666;	
+}
+ul.lbook-sub-list >li:hover {
+	color : #1f8ce6;
+	font-weight: 700;
+}
+
+article.rightList {
+	width : 800px;
+	height : 600px;
+	float : left; 
+	margin-top : 1px;
+}
+article.rightList > div.rbooks-list {}
+article.rightList > div.rbooks-list {
+	width : 160px;
+	height : 600px;
+	float : left;
+	padding-top : 10px;
+	border-right : 1px solid lightgray;
+}
+article.rightList > div.rbooks-list > div.e-book-list {
+	padding : 0 15px;
+}
+article.rightList > div.rbooks-list > div.e-book-list > h3 {
+	margin : 5px 0;
+}
+article.rightList > div.rbooks-list > div.e-book-list > h3 > a {
+	display: block;
+	height : 35px;
+	line-height : 35px;
+	padding : 0 10px;
+	background: #1f8ce6;
+	color: white;
+	font-weight: 800;
+    font-size: 14px;
+    border-radius: 3px;
+}
+article.rightList > div.rbooks-list > div.e-book-list > h3:hover a {
+	background-color: #0f5c9b;
+}
+article.rightList > div.rbooks-list > div.e-book-list > h3 > a > span {
+	float : right;
+	color : white; 
+	font-size : 10px;
+	font-weight: 600;
+}
+article.rightList > div.rbooks-list > div.e-book-list > ul > li a {
+	display : block;
+	width : 100%;
+	height : 30px;
+	line-height: 30px;
+	padding-left : 15px;
+	color : #666;
+	font-size: 12px;
+	font-weight: 500;
+}
+article.rightList > div.rbooks-list > div.e-book-list > ul > li:hover a {
+	color : #1f8ce6;
+	font-weight: 700;
+	
+}
