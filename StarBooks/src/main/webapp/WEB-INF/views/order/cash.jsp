@@ -72,7 +72,8 @@
 	</form>
 	</div>
 </section>
-
+ <%@ include file="../footer.jsp" %>
+ 
 <script>
     const radio = document.querySelectorAll('input[name="cash"]')
     radio.forEach(radio=>radio.onchange=function(e){

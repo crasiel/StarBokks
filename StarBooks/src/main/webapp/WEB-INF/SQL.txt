@@ -1,17 +1,25 @@
 회원가입
 CREATE TABLE member (
-  idx int NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  user_id varchar(20) NOT NULL UNIQUE KEY,
+  idx int NOT NULL AUTO_INCREMENT,
+  user_id varchar(20) NOT NULL,
   user_pw varchar(200) NOT NULL,
   user_name varchar(20) NOT NULL,
-  user_email varchar(30) NOT NULL UNIQUE KEY,
+  user_email varchar(30) NOT NULL,
   user_birth varchar(8) NOT NULL,
-  user_gender varchar(2) NOT NULL
-) ;
+  user_gender varchar(2) NOT NULL,
+  accChk int NOT NULL,
+  infoChk int NOT NULL,
+  eventChk int DEFAULT NULL,
+  otherChk int DEFAULT NULL,
+  join_date datetime DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`idx`),
+  UNIQUE KEY `userid` (`user_id`),
+  UNIQUE KEY `user_email_UNIQUE` (`user_email`)
+);
 
 -->insert 예제. 비밀번호 hash 처리로, 홈페이지에서 회원가입을 할 것을 권함.
-insert into member(user_id, user_pw,user_name,user_email,user_birth, user_gender)
-values('test1', '1234', '테스터', 'test1@gmail.com', '19930808', '여');			
+insert into member(user_id, user_pw,user_name,user_email,user_birth, user_gender,accChk, infoChk, eventChk, otherChk)
+values('test1', '1234', '테스터', 'test1@gmail.com', '19930808', '여', 1, ,1, 0, 0);			<- 비밀번호 해시처리로 로그인 안됨. insert문 말고 회원가입하길 권함.
 
 회원 탈퇴
 CREATE TABLE del_member (

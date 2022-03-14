@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file="../header.jsp" %>
-<section id="mystarWRap" class="clearfix">
+<section id="mystarWRap" class="clearfix" style="height : 780px">
 <%@ include file="../order/leftwrap.jsp" %>
    <div class="rightWrap" id="modify">
    <h2>정보변경</h2>
@@ -43,11 +43,21 @@
    		<td>${dto.user_gender }</td>
    	</tr>
    	<tr>
-   		<th>마케팅 정보 수신 관리</th><td></td></tr>
+   		<th>마케팅 정보 수신 관리</th>
+   		<td>
+   			<div class="chkbox">
+				<p><input type="checkbox" name="accChk" value="1"  ${dto.accChk == 1? 'checked' : '' }>이용약관 동의(필수)</p>
+				<p><input type="checkbox" name="infoChk" value="1" ${dto.infoChk == 1 ? 'checked' : '' }>개인 정보 수집 및 이용 동의(필수)</p>
+				<p><input type="checkbox" name="eventChk" value="1" ${dto.eventChk == 1 ? 'checked' : '' }>이벤트,혜택알림 수신 동의(선택)</p>
+				<p><input type="checkbox" name="otherChk" value="1" ${dto.otherChk == 1 ? 'checked' : '' }>성별,생년 정보 제공 동의(선택)</p>
+			</div>
+   		</td>
+   	</tr>
    	</tbody>
    </table>
    </div>
  </section>
+ <%@ include file="../footer.jsp" %>
  <script>
  const deleteBtn = document.getElementById('deleteBtn');
  deleteBtn.onclick = function(){

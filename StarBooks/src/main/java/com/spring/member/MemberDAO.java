@@ -7,8 +7,8 @@ import org.apache.ibatis.annotations.Update;
 
 public interface MemberDAO {
 
-	@Insert("insert into member (user_id, user_pw, user_name, user_email, user_birth, user_gender)"
-			+ " values(#{user_id}, #{user_pw}, #{user_name}, #{user_email}, #{user_birth}, #{user_gender})")
+	@Insert("insert into member (user_id, user_pw, user_name, user_email, user_birth, user_gender, accChk, infoChk, eventChk, otherChk)"
+			+ " values(#{user_id}, #{user_pw}, #{user_name}, #{user_email}, #{user_birth}, #{user_gender}, #{accChk}, #{infoChk}, #{eventChk}, #{otherChk})")
 	int insertMember(MemberDTO dto);
 
 	@Select("select * from member where user_id=#{user_id} and user_pw=#{user_pw}")

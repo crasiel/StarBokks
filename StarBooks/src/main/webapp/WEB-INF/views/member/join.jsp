@@ -55,9 +55,9 @@
 			<hr>
 			<div class="chkbox">
 				<p><input type="checkbox" name="accChk" value="1">이용약관 동의(필수)</p>
-				<p><input type="checkbox" name="infoChk" value="2">개인 정보 수집 및 이용 동의(필수)</p>
-				<p><input type="checkbox" name="eventChk" value="3">이벤트,혜택알림 수신 동의(선택)</p>
-				<p><input type="checkbox" name="otherChk" value="4">성별,생년 정보 제공 동의(선택)</p>
+				<p><input type="checkbox" name="infoChk" value="1">개인 정보 수집 및 이용 동의(필수)</p>
+				<p><input type="checkbox" name="eventChk" value="1">이벤트,혜택알림 수신 동의(선택)</p>
+				<p><input type="checkbox" name="otherChk" value="1">성별,생년 정보 제공 동의(선택)</p>
 			</div>
 		</div>
 		<p><input type="submit" value="회원가입"></p>

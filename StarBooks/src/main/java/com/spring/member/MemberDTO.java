@@ -12,6 +12,8 @@ public class MemberDTO {
 	private int idx;
 	private String user_id, user_pw, user_name, user_email, user_birth, user_gender;
 	private char isCookie;
+	private int accChk, infoChk, eventChk, otherChk;
+	
 	public int getIdx() {
 		return idx;
 	}
@@ -60,5 +62,29 @@ public class MemberDTO {
 	public void setIsCookie(char isCookie) {
 		this.isCookie = isCookie;
 	}
-
+	public int getAccChk() {
+		return accChk;
+	}
+	public void setAccChk(int accChk) {
+		this.accChk = accChk;
+	}
+	public int getInfoChk() {
+		return infoChk;
+	}
+	public void setInfoChk(int infoChk) {
+		this.infoChk = infoChk;
+	}
+	public int getEventChk() {
+		return eventChk;
+	}
+	public void setEventChk(int eventChk) {
+		this.eventChk = eventChk;
+	}
+	public int getOtherChk() {
+		return otherChk;
+	}
+	public void setOtherChk(int otherChk) {
+		this.otherChk = otherChk;
+	}
+	
 }
