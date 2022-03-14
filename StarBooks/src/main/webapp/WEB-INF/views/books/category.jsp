@@ -168,24 +168,27 @@
 /* 텍스트 수에 따른 너비 지정시 사용 (div.paging > a 만 있을 경우) */
 const width = document.getElementById('paging');
 const childValue = width.children;
-let count = 0;
+// let count = 0;
+let countNum = 0;
 for(let i = 0; i < childValue.length; i++ ){
-	//console.log('paging : ' + childValue[i].outerText + ', length : ' + childValue[i].outerText.length);
-	count += childValue[i].outerText.length;
+	countNum += 1;
+	//	count += childValue[i].outerText.length; a 크기 안정해져 있고 글자수에 따른 너비 정할때 사용
 }
-console.log(count);
-if(count > 21){
+console.log('countNum : ' + countNum);
+// console.log(count);
+width.style.width = '0';
+if(countNum > 10){
 	width.style.width = '355px';
-}else if(count > 9){
+}else if(countNum > 9){
 	width.style.width = '320px';
-}else if(count > 7){
+}else if(countNum > 7){
 	width.style.width = '265px';
-}else if(count > 5){
-	width.style.width = '220px';
-}else if(count > 3){
-	width.style.width = '170px';
-}else if(count > 1){
-	width.style.width = '60px';
+}else if(countNum > 5){
+	width.style.width = '205px';
+}else if(countNum > 3){
+	width.style.width = '145px';
+}else if(countNum > 1){
+	width.style.width = '90px';
 }else {
 	width.style.width = '30px';
 }
