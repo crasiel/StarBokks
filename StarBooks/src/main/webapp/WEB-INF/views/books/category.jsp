@@ -89,11 +89,7 @@
 							</c:if>
 							
 							<c:forEach var="i" begin="${paging.begin }" end="${paging.end }" >				
-								<a href="${cpath }/books/category/${num }?str=${category }&start=${i }" ${paging.page == i ? 'class="ch"' : '' } >
-									${paging.page == i ? '<b>' : '' }
-									${i }
-									${paging.page == i ? '</b>' : '' }
-								</a>
+								<a href="${cpath }/books/category/${num }?str=${category }&start=${i }" ${paging.page == i ? 'class="ch"' : '' } >${i }</a>
 							</c:forEach>
 			
 							<c:if test="${paging.next }">
@@ -119,11 +115,7 @@
 							</c:if>
 							
 							<c:forEach var="i" begin="${npaging.begin }" end="${npaging.end }" >				
-								<a href="${cpath }/books/category/${num }?str=${category }&start=${i }" ${npaging.page == i ? 'class="ch"' : '' } >
-									${npaging.page == i ? '<b>' : '' }
-									${i }
-									${npaging.page == i ? '</b>' : '' }
-								</a>
+								<a href="${cpath }/books/category/${num }?str=${category }&start=${i }" ${npaging.page == i ? 'class="ch"' : '' } >${i }</a>
 							</c:forEach>
 			
 							<c:if test="${npaging.next }">
@@ -149,9 +141,7 @@
 							</c:if>
 							
 							<c:forEach var="i" begin="${cpaging.begin }" end="${cpaging.end }" >				
-								<a href="${cpath }/books/category/${num }?str=${category }&start=${i }" ${cpaging.page == i ? 'class="ch"' : '' } >
-									${i }
-								</a>
+								<a href="${cpath }/books/category/${num }?str=${category }&start=${i }" ${cpaging.page == i ? 'class="ch"' : '' } >${i }</a>
 							</c:forEach>
 			
 							<c:if test="${cpaging.next }">
@@ -175,7 +165,35 @@
 	</article>
 </section>
 <script>
-window.onload = function() {
+/* 텍스트 수에 따른 너비 지정시 사용 (div.paging > a 만 있을 경우) */
+const width = document.getElementById('paging');
+const childValue = width.children;
+let count = 0;
+for(let i = 0; i < childValue.length; i++ ){
+	//console.log('paging : ' + childValue[i].outerText + ', length : ' + childValue[i].outerText.length);
+	count += childValue[i].outerText.length;
+}
+console.log(count);
+if(count > 21){
+	width.style.width = '355px';
+}else if(count > 9){
+	width.style.width = '320px';
+}else if(count > 7){
+	width.style.width = '265px';
+}else if(count > 5){
+	width.style.width = '220px';
+}else if(count > 3){
+	width.style.width = '170px';
+}else if(count > 1){
+	width.style.width = '60px';
+}else {
+	width.style.width = '30px';
+}
+
+</script>
+
+<script>
+window.onload = function() {								// 페이지 로딩시 탭메뉴 구분을 위한 함수
 	 console.log(window.location.search)
 	 const url = new URL(window.location.href)
 	 const urlParam = url.searchParams;
