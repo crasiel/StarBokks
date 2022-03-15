@@ -4,6 +4,7 @@ import java.io.UnsupportedEncodingException;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.HashMap;
 import java.util.Properties;
 import java.util.UUID;
 
@@ -150,5 +151,16 @@ public class MemberService {
 		return dao.delete(id);
 	}
 
+	public int chkUpdate(MemberDTO dto,String id, Integer eventChk, Integer otherChk) {
+//		MemberDTO dto = new MemberDTO();
+		dto.setUser_id(id);
+		dto.setEventChk((eventChk != null ? 1 : 0 ));
+		dto.setOtherChk((otherChk != null ? 1 : 0 ));
+//		HashMap<String , Object> map = new HashMap<String, Object>();
+//		map.put("user_id", id);
+//		map.put("eventChk", (eventChk != null ? 1 : 0 ));
+//		map.put("otherChk", (otherChk != null ? 1 : 0 ));
+		return dao.chkUpdate(dto);
+	}
 
 }

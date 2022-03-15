@@ -1,5 +1,7 @@
 package com.spring.member;
 
+import java.util.HashMap;
+
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
@@ -38,5 +40,8 @@ public interface MemberDAO {
 
 	@Delete("delete from member where user_id = #{id}")
 	int delete(String id);
+
+	@Update("update member set eventChk = #{eventChk}, otherChk = #{otherChk} where user_id = #{user_id}")
+	int chkUpdate(MemberDTO dto);
 
 }

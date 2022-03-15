@@ -46,10 +46,11 @@
    		<th>마케팅 정보 수신 관리</th>
    		<td>
    			<div class="chkbox">
-				<p><input type="checkbox" name="accChk" value="1"  ${dto.accChk == 1? 'checked' : '' }>이용약관 동의(필수)</p>
-				<p><input type="checkbox" name="infoChk" value="1" ${dto.infoChk == 1 ? 'checked' : '' }>개인 정보 수집 및 이용 동의(필수)</p>
+				<p><input type="checkbox" name="accChk" value="1"  ${dto.accChk == 1? 'checked' : '' } onclick="alert('필수동의사항 변경불가');return false;">이용약관 동의(필수)</p>
+				<p><input type="checkbox" name="infoChk" value="1" ${dto.infoChk == 1 ? 'checked' : '' } onclick="alert('필수동의사항 변경불가');return false;">개인 정보 수집 및 이용 동의(필수)</p>
 				<p><input type="checkbox" name="eventChk" value="1" ${dto.eventChk == 1 ? 'checked' : '' }>이벤트,혜택알림 수신 동의(선택)</p>
 				<p><input type="checkbox" name="otherChk" value="1" ${dto.otherChk == 1 ? 'checked' : '' }>성별,생년 정보 제공 동의(선택)</p>
+				<p><button id="chkBtn">마케팅정보수신변경</button></p>
 			</div>
    		</td>
    	</tr>
@@ -58,6 +59,36 @@
    </div>
  </section>
  <%@ include file="../footer.jsp" %>
+ <script>
+ 	const chkBtn = document.getElementById('chkBtn');
+ 	chkBtn.onclick = function(e){
+ 		e.preventDefault();
+ 		const eventChk = document.querySelector('input[name="eventChk"]');
+ 		const otherChk = document.querySelector('input[name="otherChk"]');
+ 		let url = '${cpath}/member/modify/${dto.user_id}?';
+ 		if(eventChk.checked){
+ 			url += 'eventChk=1&';
+ 		}
+ 		if(otherChk.checked){
+ 			url += 'otherChk=1&';
+ 		}
+ 		url = url.substring(0, url.length-1);
+ 		alert('마케팅정보수신을 변경하였습니다.');
+ 		const opt = {
+ 				method : 'PUT'
+ 		}
+ 		fetch(url, opt)
+		.then(resp=>resp.text())
+		.then(text=>{
+			if(text == 1){
+				console.log(text)
+				location.href='${cpath}/member/modify';
+			}
+		});
+ 	}
+ 	
+ </script>
+ 
  <script>
  const deleteBtn = document.getElementById('deleteBtn');
  deleteBtn.onclick = function(){

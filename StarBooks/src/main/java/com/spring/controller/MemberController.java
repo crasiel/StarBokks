@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.apache.ibatis.annotations.Update;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CookieValue;
@@ -17,6 +18,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -157,6 +159,15 @@ public class MemberController {
 		mav.setViewName("alert");
 		mav.addObject("msg", "회원가입 실패했습니다. 잠시 후 다시 이용해주세요.");
 		return mav;
+	}
+	
+	@PutMapping(value="/modify/{id}")
+	@ResponseBody
+	public String chkUpdate(@PathVariable String id, Integer eventChk, Integer otherChk, HttpSession session) {
+		MemberDTO dto = (MemberDTO) session.getAttribute("login");				
+		System.out.println(id + ", " + eventChk + ", " + otherChk);
+		int row = ms.chkUpdate(dto, id, eventChk, otherChk);
+		return row + "";
 	}
 	
 //	@RequestMapping(value="/delete/{id}", method = RequestMethod.DELETE)
