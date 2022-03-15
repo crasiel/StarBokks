@@ -152,14 +152,11 @@ public class MemberService {
 	}
 
 	public int chkUpdate(MemberDTO dto,String id, Integer eventChk, Integer otherChk) {
-//		MemberDTO dto = new MemberDTO();
+
 		dto.setUser_id(id);
 		dto.setEventChk((eventChk != null ? 1 : 0 ));
 		dto.setOtherChk((otherChk != null ? 1 : 0 ));
-//		HashMap<String , Object> map = new HashMap<String, Object>();
-//		map.put("user_id", id);
-//		map.put("eventChk", (eventChk != null ? 1 : 0 ));
-//		map.put("otherChk", (otherChk != null ? 1 : 0 ));
+
 		return dao.chkUpdate(dto);
 	}
 

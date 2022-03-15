@@ -242,12 +242,7 @@ public class MemberController {
 	@GetMapping("/mystar")
 	public void mystar() {}
 	
-//	@ExceptionHandler(EmptyResultDataAccessException.class)
-//	public ModelAndView notfound() {
-//		ModelAndView mav = new ModelAndView("alert");
-//		mav.addObject("msg", "id나 비밀번호가 일치하지 않습니다.");
-//		return mav;
-//	}
+
 }
 
 
