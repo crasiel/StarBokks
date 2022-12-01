@@ -4,7 +4,7 @@
 
 <section id="bestSeller" class="wideGridWarp">
 
-					<h1>베스트셀러</h1>
+					<h1>베스트셀러 TOP30</h1>
 					<div class="book-grid">
 							<c:forEach var="best" begin="0" end="29" items="${bestSeller }">
 								<div>

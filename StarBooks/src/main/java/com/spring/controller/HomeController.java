@@ -65,6 +65,7 @@ public class HomeController {
 			mav.addObject("paging", paging);
 			mav.addObject("count", list.get(0).getCount());		// 검색 결과 수
 //			System.out.println("homeController count : " + list.get(0).getCount());
+			System.out.println("여기까지 완료!!!!");
 		}
 		return mav;
 	}

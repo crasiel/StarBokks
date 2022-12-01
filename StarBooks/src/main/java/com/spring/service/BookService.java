@@ -31,8 +31,8 @@ import com.spring.book.BookDTO;
 
 @Service
 public class BookService {
-	final String client_id = "p3EkwlpyD99frDpNN5th";
-	final String client_secret = "_t4XeBaQvU";
+	final String client_id = "YHirZaawV8b4DiL5mh0u";
+	final String client_secret = "ahOm4vsHZl";
 	final String urladdr1= "https://openapi.naver.com/v1/search/book.xml?";
 	final String urladdr2= "https://openapi.naver.com/v1/search/book_adv.xml?";
 //	public String search(String Query) {					// json으로 할 경우
@@ -137,7 +137,7 @@ public class BookService {
 					dto.setImage(getTagValue("image", element));
 					dto.setIsbn(getTagValue("isbn", element));
 					dto.setLink(getTagValue("link", element));
-					dto.setPrice(Integer.parseInt( getTagValue("price", element)));
+					dto.setPrice(Integer.parseInt( getTagValue("discount", element)));
 					dto.setPubdate(getTagValue("pubdate", element));
 					dto.setTitle(getTagValue("title", element));
 					dto.setCount(count);
@@ -172,18 +172,21 @@ public class BookService {
 	public ArrayList<BookDTO>bookList(String str, int cate, Integer start){
 		
 		ArrayList<BookDTO> array = null;
-		String url2 = "&d_catg="+cate+ "&display=20&start="+start;
+		//String url2 = "&d_catg="+cate+ "&display=20&start="+start;
+		String url2 =  "&display=20&start="+start;
 		array = naverBook(str,url2);
 		return array;		
 	}
 	
 	public ArrayList<BookDTO>bookListC(String str, int cate, Integer start){	
-		String url2 = "&d_catg="+cate+ "&sort=count&display=20&start="+start;
+		//String url2 = "&d_catg="+cate+ "&sort=count&display=20&start="+start;
+		String url2 = "&sort=sim&display=20&start="+start;
 		return naverBook(str,url2);	
 	}
 
 	public ArrayList<BookDTO>bookListNew(String str, int cate, Integer start){		
-		String url2 = "&d_catg="+cate+ "&sort=date&display=20&start="+start;
+		//String url2 = "&d_catg="+cate+ "&sort=date&display=20&start="+start;
+		String url2 = "&sort=date&display=20&start="+start;
 		return naverBook(str,url2);	
 	}
 	
@@ -236,7 +239,7 @@ public class BookService {
 						dto.setImage(getTagValue("image", element));
 						dto.setIsbn(getTagValue("isbn", element));
 						dto.setLink(getTagValue("link", element));
-						dto.setPrice(Integer.parseInt( getTagValue("price", element)));
+						dto.setPrice(Integer.parseInt( getTagValue("discount", element)));
 						dto.setPubdate(getTagValue("pubdate", element));
 						dto.setTitle(getTagValue("title", element));
 						dto.setCount(count);

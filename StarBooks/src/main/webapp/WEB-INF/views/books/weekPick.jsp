@@ -4,7 +4,7 @@
 
 <section id="weekPick" class="wideGridWarp">
 
-					<h1>주간 Pick! 역사기행</h1>
+					<h1>주간 Pick! 역사기행 30</h1>
 					<div class="book-grid">
 							<c:forEach var="week" begin="0" end="29" items="${weekPick }">
 								<div>

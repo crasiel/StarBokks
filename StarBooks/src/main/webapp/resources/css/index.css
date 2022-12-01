@@ -345,7 +345,6 @@ section#iconMenu > article > ul >li  span {
 	margin-top :5px;
 }
 
-/* 베스트셀러 - grid */
 
 
 /* 신간도서 슬라이드 */
@@ -488,11 +487,15 @@ section#bestWrap, section#week-bestWrap {
 	margin-bottom : 70px;
 }
 div.bookImg > a> img {
-	display: block; margin: 0 auto; width:80%; height: 118px;
+	display: block; 
+	margin: 0 auto; 
+	width:80%; 
+	height: 118px;
+	border: 1px solid #eee;
 }
 
 ul.grid  div.subTitle > h3.fh3 {
-	font-size : 18px; margin-bottom : 5px;
+	font-size : 17px; margin-bottom : 5px;
 }
 ul.grid  div.subTitle > h4.fh4 {
 	font-size : 13px;color : #aaa

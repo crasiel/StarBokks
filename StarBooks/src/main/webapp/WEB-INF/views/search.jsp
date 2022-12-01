@@ -37,7 +37,7 @@
 									<div>
 									<h4>${j.title }</h4>
 									<p>작가 : ${j.author} || 출판사 : ${j.publisher} || 출판일자 : ${j.pubdate }</p>
-									<p> 
+									<p class="pCont"> 
 										${j.description } 
 									</p>
 									</div>
@@ -91,11 +91,11 @@ const parent = document.querySelector('.page-current');
 const countA = parent.childElementCount;
 console.log(count)
 if(count == 1){
-	width.style.width = (countA * 42) +'px';
+	width.style.width = (countA * 43) +'px';
 }else if(count == 2){
-	width.style.width = (countA * 42 + 45) +'px';
+	width.style.width = (countA * 43 + 45) +'px';
 }else if(count == 3){
-	width.style.width = (countA * 42 + 90) +'px';
+	width.style.width = (countA * 43 + 90) +'px';
 }
 
 /* 텍스트 수에 따른 너비 지정시 사용 (div.paging > a 만 있을 경우)

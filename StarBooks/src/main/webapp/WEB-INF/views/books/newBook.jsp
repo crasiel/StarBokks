@@ -5,7 +5,7 @@
 
 <section id="newBook" class="wideGridWarp">
 
-					<h1>신간도서</h1>
+					<h1>신간도서 TOP30</h1>
 					<div class="book-grid">
 							<c:forEach var="newBook" begin="0" end="29" items="${newBook }">
 								<div>

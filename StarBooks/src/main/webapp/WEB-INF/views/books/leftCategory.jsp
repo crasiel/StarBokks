@@ -7,20 +7,20 @@
 				<li class="main-category ct100"><a href="${cpath }/books/category/100?str=소설">소설</a>
 					<ul class="sub-category">
 						<li class="cl100"><a href="${cpath }/books/category/100?str=소설">소설 전체</a></li>
-						<li class="cl100010010"><a href="${cpath }/books/category/100010010?str=한국">한국소설</a></li>
-						<li class="cl100010020"><a href="${cpath }/books/category/100010020?str=영미">영미소설</a></li>
-						<li class="cl100010030"><a href="${cpath }/books/category/100010030?str=일본">일본소설</a></li>
-						<li class="cl100010040"><a href="${cpath }/books/category/100010040?str=중국">중국소설</a></li>
-						<li class="cl100010050"><a href="${cpath }/books/category/100010050?str=러시아">러시아소설</a></li>
-						<li class="cl100010060"><a href="${cpath }/books/category/100010060?str=프랑스">프랑스소설</a></li>
-						<li class="cl100010070"><a href="${cpath }/books/category/100010070?str=독일">독일소설</a></li>
-						<li class="cl100010080"><a href="${cpath }/books/category/100010080?str=기타" >기타국가소설</a></li>
+						<li class="cl100010010"><a href="${cpath }/books/category/100010010?str=한국 소설">한국소설</a></li>
+						<li class="cl100010020"><a href="${cpath }/books/category/100010020?str=영미 소설">영미소설</a></li>
+						<li class="cl100010030"><a href="${cpath }/books/category/100010030?str=일본 소설">일본소설</a></li>
+						<li class="cl100010040"><a href="${cpath }/books/category/100010040?str=중국 소설">중국소설</a></li>
+						<li class="cl100010050"><a href="${cpath }/books/category/100010050?str=러시아 소설">러시아소설</a></li>
+						<li class="cl100010060"><a href="${cpath }/books/category/100010060?str=프랑스 소설">프랑스소설</a></li>
+						<li class="cl100010070"><a href="${cpath }/books/category/100010070?str=독일 소설">독일소설</a></li>
+						<li class="cl100010080"><a href="${cpath }/books/category/100010080?str=기타 소설" >기타국가소설</a></li>
 					</ul>
 				</li>
 				<li class="main-category ct160"><a href="${cpath }/books/category/160?str=경영">경영/경제</a>
 					<ul class="sub-category" >
-						<li class="cl160"><a href="${cpath }/books/category/160?str=경영"">경영일반</a></li>
-						<li class="cl160010"><a href="${cpath }/books/category/160010?str=경제"">경제일반</a></li>
+						<li class="cl160"><a href="${cpath }/books/category/160?str=경영 일반"">경영일반</a></li>
+						<li class="cl160010"><a href="${cpath }/books/category/160010?str=경제 일반"">경제일반</a></li>
 						<li class="cl160030"><a href="${cpath }/books/category/160030?str=마케팅">마케팅/세일즈</a></li>
 						<li class="cl160040"><a href="${cpath }/books/category/160040?str=재테크">재테크/금융/부동산</a></li>
 						<li class="cl160050"><a href="${cpath }/books/category/160050?str=창업">창업</a></li>

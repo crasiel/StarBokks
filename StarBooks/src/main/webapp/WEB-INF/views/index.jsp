@@ -60,12 +60,12 @@
   </script>
     
     <section id="recommendWrap" style="margin-bottom : 70px;">
-        <h1>MD픽! 추천 도서</h1>
-        <div class="recommend" style="width : 80%; margin : 0 auto;">
-					<div class="book-grid" style="display : grid; grid : repeat(1, 100%)/auto-flow 25%;grid-row-gap: 10px;">
+        <h1>MD픽! 추천도서 TOP4</h1>
+        <div class="recommend" style="width : 90%; margin : 0 auto;">
+					<div class="book-grid" style="display : grid; grid : repeat(1, 100%)/auto-flow 23%;grid-column-gap: 28px;">
 							<c:forEach var="book" items="${recommend }" begin="0" end="3">
 								<div style=" width : 220px; height : 300px; margin : 0 auto; ">
-									<img src="${book.coverLargeUrl }" style="display: block; width: 80%; height : 250px;margin: 0 auto;">
+									<img src="${book.coverLargeUrl }" style="display: block; width: 85%; height : 260px;margin: 0 auto; border: 1px solid #eee;">
 									<div style="width : 90%; margin : 0 auto;">
 										<h3 style="line-height:30px;font-size: 16px;">${book.title }</h3>
 										<p style="font-size : 13px; color : #aaa">${book.author }</p>
