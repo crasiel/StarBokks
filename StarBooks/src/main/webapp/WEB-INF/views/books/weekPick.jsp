@@ -7,7 +7,7 @@
 					<h1>주간 Pick! 역사기행 30</h1>
 					<div class="book-grid">
 							<c:forEach var="week" begin="0" end="29" items="${weekPick }">
-								<div>
+								<div onclick="link('${week.link}')">
 									<img src="${week.coverLargeUrl}" alt="${week.title }" title="${week.title }">
 									<div>
 										<h3>${week.title }</h3>

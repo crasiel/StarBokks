@@ -350,7 +350,7 @@ section#iconMenu > article > ul >li  span {
 /* 신간도서 슬라이드 */
 section#NewBookSlide {
 	width : 100%; 
-	height : 480px; 
+	height : 500px; 
 	margin-bottom : 40px;
 	padding-top : 30px; 
 	padding-bottom : 20px; 
@@ -360,17 +360,17 @@ section#NewBookSlide {
 }
 section#NewBookSlide > article.new-book-slide {
 	width : 70%; 
-	margin : 0 auto; 
+	margin : 5px auto 0; 
 	padding : 10px; 
 /* 	border : 1px dashed skyblue; */
 }
 article.new-book-slide div.slick-slide {
     margin : 0 10px;
-    height : 340px; 
+    height : 360px; 
 /*     border: 1px solid lightskyblue */
 }
  article.new-book-slide div.imgbg{
- display: block; margin: 0 auto; width:95%; height : 265px;  
+ display: block; margin: 0 auto; width:95%; height : 280px;  
 border-radius : 3px;
  }
 article.new-book-slide .slick-dots {

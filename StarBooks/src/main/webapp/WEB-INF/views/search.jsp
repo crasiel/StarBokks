@@ -19,20 +19,20 @@
 				 -->
 					<li class="stm on" title="0">전체</li>
 					<!-- 여기부터는 forEach로 처리하면 될듯 -->
-					<c:forEach var="i" begin="1" end="8" step="1">					
+	<%-- 				<c:forEach var="i" begin="1" end="8" step="1">					
 						<li class="stm" title="${i }">제목 ${i }</li>
-					</c:forEach>
+					</c:forEach> --%>
 				</ul>
 			</div>
 			
 			<div class="search-tab-content">
 				<c:forEach var="i" begin="0" end="8">
 					<div class="stCont${i } ${i == 0 ? 'view' : '' }">
-						<h2>목록 ${i }</h2>
+						<%-- <h2>목록 ${i }</h2> --%>
 						<ul>
 						<c:forEach var="j" begin="0" end="19" items="${bookjson }">
 							<li>
-								<div class="clearfix">
+								<div class="clearfix" onclick="link('${j.link}')">
 									<img src="${j.image }">
 									<div>
 									<h4>${j.title }</h4>

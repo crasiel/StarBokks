@@ -54,26 +54,37 @@ section#searchWrap > article.search > div.search-tab > div.search-tab-content > 
 section#searchWrap > article.search > div.search-tab > div.search-tab-content > div > ul {	
 	margin-top : 30px;
 }
+section#searchWrap > article.search > div.search-tab > div.search-tab-content > div > ul >li:first-child {
+	border-top : 1px dashed skyblue;
+}
 section#searchWrap > article.search > div.search-tab > div.search-tab-content > div > ul >li {
 	width : 100%;
 	height : 140px;
 	padding : 10px;
 	border-bottom : 1px dashed skyblue;
 }
-
+div.search-tab > div.search-tab-content > div > ul >li:hover {
+	background-color : #EDFAFE;
+	cursor : pointer;
+}
 div.search-tab > div.search-tab-content > div > ul >li > div > img {
 	float : left; width:80px; margin-right : 20px;
 }
 
 div.search-tab > div.search-tab-content > div > ul >li > div > div {
-	float : left; width : 900px; height : 120px;padding-top : 10px;
+	float : left; width : 900px; height : 120px;padding-top : 7px;
 }
 div.search-tab > div.search-tab-content > div > ul >li > div > div > h4 {
-	width : 100%; height : 20px;white-space: nowrap;overflow : hidden;text-overflow: ellipsis;
+	width : 100%; height : 20px; margin-bottom : 3px; white-space: nowrap;overflow : hidden;text-overflow: ellipsis;
+}
+div.search-tab > div.search-tab-content > div > ul >li > div > div > p {
+	color : gray;
 }
 div.search-tab > div.search-tab-content > div > ul >li > div > div > p.pCont {
  width : 900px; 
 /* white-space: nowrap; */
+margin-top : 5px;
+color : navy;
 overflow: hidden;
 ext-overflow: ellipsis;
 white-space: normal;

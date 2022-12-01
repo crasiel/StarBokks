@@ -63,10 +63,10 @@
 	        <li>
 	        	<ul class="sub-menu clearfix">
 	           		<li><a href="${cpath }/books/list"><i class="xi-bars xi-x"></i></a></li>
-	                <li><a href="">일반</a></li>
-	                <li><a href="">소설</a></li>
-	                <li><a href="">만화</a></li>
-	                <li><a href="">웹툰</a></li>
+	                <li><a href="${cpath }/books/category/250?str=과학&type=1">과학</a></li>
+	                <li><a href="${cpath }/books/category/100?str=소설&type=1">소설</a></li>
+	                <li><a href="${cpath }/books/category/330?str=만화&type=1">만화</a></li>
+	                <li><a href="${cpath }/books/category/330110?str=웹툰&type=1">웹툰</a></li>
 	          	</ul>
 	          </li>
           </ul>
@@ -125,4 +125,11 @@
     }
     </script>
     
+    <!-- 도서 클릭시 네이버, 인터파크 상세도서정보로 이동 -->
+    <script>
+ 	function link(url){
+		console.log(url);
+		window.open(url);
+	} 
+</script>
     

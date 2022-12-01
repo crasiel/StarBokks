@@ -27,7 +27,7 @@
 						</div>
 						<div class="book-grid book10">
 							<c:forEach var="book" begin="0" end="9" items="${list }" >
-								<div>
+								<div onclick="link('${book.link}')">
 									<img src="${book.image}" alt="${book.title }" title="${book.title }">
 									<p>${book.title }</p>
 									<p>${book.author }</p>
@@ -44,7 +44,7 @@
 						</div>
 						<div class="book-grid">
 							<c:forEach var="book" begin="0" end="4" items="${nlist }" >
-								<div>
+								<div onclick="link('${book.link}')">
 									<img src="${book.image }" alt="${book.title }" title="${book.title }">
 									<p style="">${book.title }</p>
 									<p style="">${book.author }</p>
@@ -61,7 +61,7 @@
 						</div>
 						<div class="book-grid">
 							<c:forEach var="book" begin="0" end="4" items="${clist }" >
-								<div>
+								<div onclick="link('${book.link}')">
 									<img src="${book.image }" alt="${book.title }" title="${book.title }">
 									<p style="">${book.title }</p>
 									<p style="">${book.author }</p>
@@ -75,7 +75,7 @@
 					<h2>전체보기</h2>
 					<div class="book-grid">
 							<c:forEach var="book" begin="0" end="19" items="${list }" >
-								<div>
+								<div onclick="link('${book.link}')">
 									<img src="${book.image}" alt="${book.title }" title="${book.title }">
 									<p>${book.title }</p>
 									<p>${book.author }</p>
@@ -101,7 +101,7 @@
 					<h2>신간</h2>
 					<div class="book-grid">
 							<c:forEach var="book" begin="0" end="19" items="${nlist }" >
-								<div>
+								<div onclick="link('${book.link}')">
 									<img src="${book.image }" alt="${book.title }" title="${book.title }">
 									<p style="">${book.title }</p>
 									<p style="">${book.author }</p>
@@ -127,7 +127,7 @@
 					<h2>인기도서</h2>
 					<div class="book-grid">
 							<c:forEach var="book" begin="0" end="19" items="${clist }" >
-								<div>
+								<div onclick="link('${book.link}')">
 									<img src="${book.image }" alt="${book.title }" title="${book.title }">
 									<p style="">${book.title }</p>
 									<p style="">${book.author }</p>
@@ -267,4 +267,6 @@ paging.forEach(paging=>paging.onclick=function(e){
 		location.href = '${cpath }/books/category/${num }?str=${category }&start=1&type='+title;			// 탭 클릭시 해당 탭 1페이지로 이동
 	});
 </script>
+
+
 <%@ include file="../footer.jsp" %>

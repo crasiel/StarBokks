@@ -7,7 +7,7 @@
 					<h1>베스트셀러 TOP30</h1>
 					<div class="book-grid">
 							<c:forEach var="best" begin="0" end="29" items="${bestSeller }">
-								<div>
+								<div onclick="link('${best.link}')">
 									<img src="${best.coverLargeUrl}"  style="" alt="${best.title }" title="${best.title }">
 									<div>
 										<h3>${best.title }</h3>

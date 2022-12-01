@@ -2,7 +2,7 @@ package com.spring.book;
 
 public class StarBookDTO {
 // 인터파크용
-	private String title, coverSmallUrl, coverLargeUrl, pubDate, description, publisher, author;
+	private String title, coverSmallUrl, coverLargeUrl, pubDate, description, publisher, author, link;
 	int priceStandard, rank;
 	public String getTitle() {
 		return title;
@@ -12,6 +12,12 @@ public class StarBookDTO {
 	}
 	public String getCoverSmallUrl() {
 		return coverSmallUrl;
+	}
+	public String getLink() {
+		return link;
+	}
+	public void setLink(String link) {
+		this.link = link;
 	}
 	public void setCoverSmallUrl(String coverSmallUrl) {
 		this.coverSmallUrl = coverSmallUrl;

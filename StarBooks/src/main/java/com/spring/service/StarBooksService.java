@@ -76,6 +76,7 @@ public class StarBooksService {
 					dto.setPriceStandard(Integer.parseInt( getTagValue("priceStandard", element)));
 					dto.setPubDate(getTagValue("pubDate", element));
 					dto.setPublisher(getTagValue("publisher", element));
+					dto.setLink(getTagValue("link", element));
 					if(num == 1) {			// rank가 있는 경우에만 set
 					dto.setRank(Integer.parseInt( getTagValue("rank", element)));
 					}

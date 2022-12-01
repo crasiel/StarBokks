@@ -8,7 +8,7 @@
 					<h1>신간도서 TOP30</h1>
 					<div class="book-grid">
 							<c:forEach var="newBook" begin="0" end="29" items="${newBook }">
-								<div>
+								<div onclick="link('${newBook.link}')">
 									<img src="${newBook.coverLargeUrl}" alt="${newBook.title }" title="${newBook.title }">
 									<div>
 										<h3>${newBook.title }</h3>
